@@ -33,6 +33,7 @@ btnNext.addEventListener("click", async ()=>{
     renderPokemons(pokemenJson.results)
     console.log(pokemenJson.next)
     console.log(offset)
+    console.log(offset)
 })
 const prevBtn = document.querySelector("#btn-prev")
 prevBtn.addEventListener("click",async()=>{
