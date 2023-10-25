@@ -1,9 +1,15 @@
-const result = await fetch("https://pokeapi.co/api/v2/pokemon/")
-// console.log(await result.json())
-const pokemons = await result.json()
-console.log(pokemons)
-const pokemonsList = pokemons.results
-
+const local = localStorage.getItem("@pokemons")
+if(!local){
+    const result = await fetch("https://pokeapi.co/api/v2/pokemon/")
+    // console.log(await result.json())
+    const pokemons = await result.json()
+    console.log(pokemons)
+    const pokemonsList = pokemons.results
+    renderPokemons(pokemonsList)
+    localStorage.setItem("@pokemons",JSON.stringify(pokemonsList))
+}else{
+    renderPokemons(JSON.parse(local))
+}
 // console.log(pokemonsList)
 
  function renderPokemons(list=[]){
@@ -21,7 +27,7 @@ const pokemonsList = pokemons.results
         `)
     })
 }
-renderPokemons(pokemonsList)
+
 
 const btnNext = document.querySelector("#btn-next")
 let offset = 0
