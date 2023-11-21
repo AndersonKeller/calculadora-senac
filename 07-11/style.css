@@ -1,0 +1,21 @@
+header{
+    display: flex;
+    height: 120px;
+}
+header h1{
+    height: calc(100% - 20px);
+}
+.gallery{
+    width: 200px;
+    display: flex;
+    overflow: hidden;
+}
+.gallery-photo{
+    display: flex;
+}
+.gallery-photo img{
+    width: 200px;
+}
+.transform{
+    transform: translateX(-200px);
+}

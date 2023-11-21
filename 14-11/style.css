@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: blue;
+    padding: 16px 0;
+}
+
+header div {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+aside{
+    background-color: red;
+}
+.section-main{
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+section:not(.section-main){
+    background-color: green;
+}
